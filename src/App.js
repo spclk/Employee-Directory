@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar'
+import EmployeeList from './components/EmployeeList'
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react';
+import axios from 'axios';
 
-function App() {
+class App extends React.Component {
+
+  state = {
+    employees: []
+  }
+
+  componentDidMount() {
+    axios.get('https://randomuser.me/api/')
+    .then(response => {
+      console.log(response);
+      this.setState({employees: response.data.results})
+    })
+  }
+
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <SearchBar />
+      <EmployeeList employees = {this.state.employees}/>
     </div>
   );
+}
 }
 
 export default App;
