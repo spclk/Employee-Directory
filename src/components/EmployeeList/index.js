@@ -1,3 +1,5 @@
+import EmployeeListItem from '../EmployeeListItem'
+
 function EmployeeList(props) {
   return (
     <>
@@ -12,7 +14,10 @@ function EmployeeList(props) {
           </tr>
         </thead>
         <tbody>
-        {props.employees[0].name.first}  
+          {props.employees.map(item=> (
+            <EmployeeListItem employee={item} key={item.phone}/>
+          ))}
+        
         </tbody>
       </table>
     </>
