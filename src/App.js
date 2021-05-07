@@ -38,7 +38,7 @@ class App extends React.Component {
   return (
     <div className="App">
       <Header />
-      <button onClick={this.sortResults}>Search by Name</button>
+      <button onClick={this.sortResults}>Sort by Last Name</button>
       <SearchBar />
       <EmployeeList employees = {this.state.filtered}/>
     </div>
