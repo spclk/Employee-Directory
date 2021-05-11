@@ -5,9 +5,6 @@ function EmployeeList(props) {
     <>
       <table class="table table-striped">
         <thead>
-          <tr>
-            <th scope="col"></th>
-          </tr>
         </thead>
         <tbody>
           {props.employees.map(item=> (

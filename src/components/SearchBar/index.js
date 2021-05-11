@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 function SearchBar() {
   return (
@@ -16,7 +17,7 @@ function SearchBar() {
             className="form-control"
           />
         </div>
-        <button type="button" className="btn btn-primary">Search</button>
+        <button type="button" className="btn btn-secondary">Search</button>
       </div>
     </>
   );
