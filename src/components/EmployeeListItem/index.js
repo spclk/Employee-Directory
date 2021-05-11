@@ -13,7 +13,6 @@ function EmployeeListItem(props) {
             <p className="card-text"> Email: {props.employee.email}</p>
             <p className="card-text"> Office Phone: {props.employee.phone}</p>
             <p className="card-text"> Cell Phone: {props.employee.cell}</p>
-            <p className="card-text"> ID: {props.employee.id.value}</p>
           </div>
         </div>
       </div>
