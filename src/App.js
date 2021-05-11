@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://randomuser.me/api/?results=10')
+    axios.get('https://randomuser.me/api/?results=15')
     .then(response => {
       console.log(response);
       this.setState({employees: response.data.results, filtered: response.data.results})
