@@ -3,15 +3,11 @@ import EmployeeListItem from '../EmployeeListItem'
 function EmployeeList(props) {
   return (
     <>
-      <table class="table table-striped">
-        <thead>
-        </thead>
-        <tbody>
+      <span class="table table-striped">
           {props.employees.map(item=> (
             <EmployeeListItem employee={item} key={item.phone}/>
           ))}
-        </tbody>
-      </table>
+      </span>
     </>
   );
 }

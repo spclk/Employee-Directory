@@ -37,7 +37,6 @@ class App extends React.Component {
   return (
     <div className="App">
       <Navbar />
-      <SearchBar />
       <button onClick={this.sortResults}>Sort by Last Name</button>
       <EmployeeList employees = {this.state.filtered}/>
     </div>
