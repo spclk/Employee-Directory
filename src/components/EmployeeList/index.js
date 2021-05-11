@@ -6,18 +6,13 @@ function EmployeeList(props) {
       <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">ID</th>
-            <th scope="col">Email</th>
-            <th scope="col">Phone</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
           {props.employees.map(item=> (
             <EmployeeListItem employee={item} key={item.phone}/>
           ))}
-        
         </tbody>
       </table>
     </>

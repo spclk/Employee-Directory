@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import SearchBar from './components/SearchBar'
 import EmployeeList from './components/EmployeeList'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -36,9 +36,9 @@ class App extends React.Component {
   render(){
   return (
     <div className="App">
-      <Header />
-      <button onClick={this.sortResults}>Sort by Last Name</button>
+      <Navbar />
       <SearchBar />
+      <button onClick={this.sortResults}>Sort by Last Name</button>
       <EmployeeList employees = {this.state.filtered}/>
     </div>
   );
