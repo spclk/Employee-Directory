@@ -1,6 +1,5 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import SearchBar from './components/SearchBar'
 import EmployeeList from './components/EmployeeList'
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
@@ -37,8 +36,8 @@ class App extends React.Component {
   return (
     <div className="App">
       <Navbar />
-      <button onClick={this.sortResults}>Sort by Last Name</button>
-      <EmployeeList employees = {this.state.filtered}/>
+      
+      <EmployeeList employees = {this.state.filtered} sortResults = {this.sortResults}/>
     </div>
   );
 }
