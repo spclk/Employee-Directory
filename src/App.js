@@ -9,7 +9,8 @@ class App extends React.Component {
 
   state = {
     employees: [],
-    filtered: []
+    filtered: [],
+    search: ""
   }
 
   componentDidMount() {
@@ -30,17 +31,35 @@ class App extends React.Component {
   this.setState({filtered: sortedEmployees})
   }
 
-  // componentDidUpdate() 
+  searchEmployees = name => {
+    const employees = this.state.filtered.filter(oneEmployee => oneEmployee.name);
+    this.setState({ employees });
+  };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+  });
+}
+  handleFormSubmit = event => {
+    event.preventDefault();
+    const employees = this.state.employees.filter(oneEmployee => {
+      return oneEmployee.name.last.toUpperCase() === this.state.search.toUpperCase()
+      || oneEmployee.name.first.toUpperCase() === this.state.search.toUpperCase()
+    });
+    this.setState({ filtered: employees });
+  };
 
   render(){
   return (
     <div className="App">
-      <Navbar />
-      
+      <Navbar employees = {this.state.filtered} searchEmployees = {this.searchEmployees} 
+      handleInputChange ={this.handleInputChange} handleFormSubmit = {this.handleFormSubmit}/>
       <EmployeeList employees = {this.state.filtered} sortResults = {this.sortResults}/>
     </div>
-  );
-}
+    );
+  };
 }
 
 export default App;
