@@ -18,6 +18,11 @@
   top: 25%;
 }
 
+.card-body {
+  position: absolute;
+  float: right;
+}
+
 .image {
     position: absolute;
     margin: 25px 10px 10px 10px;
