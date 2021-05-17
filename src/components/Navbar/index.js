@@ -7,10 +7,10 @@ function Navbar(props) {
           <div className="container-fluid">
             <h4 className="navbar-brand">Employee Directory</h4>
             <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+            <input className="form-control me-2" type="search" placeholder="Search by Name" aria-label="Search"
             name = "search"
             onChange={props.handleInputChange}/>
-            <button className="btn btn-warning" type="submit" onClick={props.handleFormSubmit}>Search</button>
+            <button className="btn btn-dark" type="submit" onClick={props.handleFormSubmit}>Search</button>
             </form>
           </div>
         </nav>
