@@ -5,11 +5,11 @@ function EmployeeList(props) {
     <>
     <br/>
     <button className = "btn btn-dark"onClick={props.sortResults}>Sort by Last Name</button>
-      <span className="table table-striped">
+      <div className="table">
           {props.employees.map(item=> (
             <EmployeeListItem employee={item} key={item.phone}/>
           ))}
-      </span>
+      </div>
     </>
   );
 }
