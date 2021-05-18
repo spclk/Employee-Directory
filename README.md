@@ -20,7 +20,7 @@
 
 ---
   ## Description
-   Employee Directory is an app I created with React. This website is designed for employees in businesses to view non-sensitive data about their co-workers. It's an easy-to-navigate directory, where a user has options to search by name or sort in alphabetical order. This project was a homework assignment in UC Davis Coding Bootcamp, where I am able to showcase my ability to work with React. 
+   Employee Directory is an app I created with React. This website is designed for employees in businesses to view non-sensitive data about their co-workers. It's an easy-to-navigate directory, where a user has options to search by name or sort in alphabetical order. Currently, it shows employees that I've fetched from Random User API, but that data can easily be replaced with real employees. This project was one of the assignments at UC Davis Coding Bootcamp, where I could showcase my ability to work with React. 
 ## Table of Contents 
   * [Installation](#installation)
   * [Usage](#usage)
@@ -28,7 +28,7 @@
   ## Installation 
   Access website at: https://spclk.github.io/Employee-Directory/
   ## Usage 
-  This app  
+  Any employee, but especially management, would greatly benefit from having this quick directory with important contact information. 
   ## Questions? 
   Contact me by email listed on https://github.com/spclk
 
